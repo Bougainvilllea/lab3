@@ -14,44 +14,43 @@ public class ToDoList {
 
         System.out.println("\nb: ");
 
-        List<Integer> be_list_and_not_to_be_array = new ArrayList<Integer>(Arrays.asList(array));
-        System.out.print(be_list_and_not_to_be_array);
+        List<Integer> new_list = new ArrayList<>(Arrays.asList(array));
+        System.out.print(new_list);
 
         System.out.println("\nc: ");
 
-        Collections.sort(be_list_and_not_to_be_array);
-        System.out.println(be_list_and_not_to_be_array + "sorted list");
+        Collections.sort(new_list);
+        System.out.println(new_list + "sorted list");
 
         System.out.println("d: ");
-        Collections.reverse(be_list_and_not_to_be_array);
-        System.out.println(be_list_and_not_to_be_array + "reverse list");
+        Collections.reverse(new_list);
+        System.out.println(new_list + "reverse list");
 
         System.out.println("e: ");
-        Collections.shuffle(be_list_and_not_to_be_array);
-        System.out.println(be_list_and_not_to_be_array +  "shuffle list");
+        Collections.shuffle(new_list);
+        System.out.println(new_list +  "shuffle list");
 
         System.out.println("f: ");
-        Collections.rotate(be_list_and_not_to_be_array, 1);
-        System.out.println(be_list_and_not_to_be_array + "rotate list");
+        Collections.rotate(new_list, 1);
+        System.out.println(new_list + "rotate list");
 
         System.out.println("g: ");
-        be_list_and_not_to_be_array.add(be_list_and_not_to_be_array.getLast());
-        System.out.println(be_list_and_not_to_be_array);
+        new_list.add(new_list.getLast());
+        System.out.println(new_list);
 
-        List<Integer> listik = new ArrayList<>();
-        Set<Integer> worry_Masha_i_am_not_duprovskiy = new HashSet<Integer>(be_list_and_not_to_be_array);
+        Set<Integer> not_duplications = new HashSet<>(new_list);
 
-        listik.addAll(worry_Masha_i_am_not_duprovskiy);
+        List<Integer> listik = new ArrayList<>(not_duplications);
         System.out.println(listik);
 
         System.out.println("h: ");
-        List<Integer> duplications = be_list_and_not_to_be_array.stream().filter(x -> Collections.frequency(be_list_and_not_to_be_array, x) > 1).toList();
+        List<Integer> duplications = new_list.stream().filter(x -> Collections.frequency(new_list, x) > 1).toList();
         System.out.println(duplications);
 
 
         System.out.println("i: ");
-        Integer[] array2 = new Integer[be_list_and_not_to_be_array.size()];
-        be_list_and_not_to_be_array.toArray(array2);
+        Integer[] array2 = new Integer[new_list.size()];
+        new_list.toArray(array2);
 
         for(int i = 0; i <= n; i++) {
             System.out.print(array2[i] + " ;");
@@ -61,8 +60,8 @@ public class ToDoList {
 
         HashMap<Integer, Integer> counter = new HashMap<>();
 
-        for(int i = 0; i < array2.length; i++) {
-            counter.put(array2[i], Collections.frequency(be_list_and_not_to_be_array, array2[i]));
+        for (Integer integer : array2) {
+            counter.put(integer, Collections.frequency(new_list, integer));
         }
         System.out.println(counter + "\n");
     }
