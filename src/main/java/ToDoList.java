@@ -56,7 +56,7 @@ public class ToDoList {
             System.out.print(array2[i] + " ;");
         }
 
-        System.out.println("j: ");
+        System.out.println("\nj: ");
 
         HashMap<Integer, Integer> counter = new HashMap<>();
 

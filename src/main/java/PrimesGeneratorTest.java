@@ -7,14 +7,26 @@ public class PrimesGeneratorTest {
         this.generator = generator;
 
     }
+
     public void test(Integer n) {
-        Integer i = 0;
+        int i = 0;
         Iterator<Integer> iterator = generator.list.iterator();
-        while (i <= n) {
-            System.out.print(iterator.next() + " ");
+        while (i < n && iterator.hasNext()) {
+            System.out.print(iterator.next() + "; ");
+            i++;
         }
+
         System.out.println();
 
+        Iterator<Integer> iterator1 = generator.list.reversed().iterator();
 
+        int ii = 0;
+        while (ii < n && iterator1.hasNext()) {
+            System.out.print(iterator1.next() + "; ");
+            ii++;
+        }
+
+
+
+        }
     }
-}
