@@ -9,7 +9,7 @@ public class HumanDemo {
 
 
 
-        System.out.println("Comparable:");
+        System.out.println("\nComparable:");
         Collections.sort(humans);
         for (Human human : humans) {
             System.out.println(human.surname + " " + human.name + " " + human.age);

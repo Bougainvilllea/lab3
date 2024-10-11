@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class ToDoList {
+public class CollectionDemo {
     public static void collection(Integer n){
         Random random = new Random();
 
