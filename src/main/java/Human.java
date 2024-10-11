@@ -16,5 +16,8 @@ public class Human implements Comparable<Human> {
         return this.surname.compareTo(sur.surname);
     }
 
-
+    @Override
+    public String toString() {
+        return surname + " " + name + " " + age;
+    }
 }

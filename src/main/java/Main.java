@@ -7,5 +7,9 @@ public class Main {
 
         PrimesGeneratorTest test = new PrimesGeneratorTest(new PrimesGenerator(10));
         test.test(3);
+
+        HumanDemo.main();
+
     }
+
 }
