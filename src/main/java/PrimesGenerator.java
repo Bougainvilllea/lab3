@@ -13,7 +13,6 @@ public class PrimesGenerator {
             int integer = i;
             BigInteger bigInteger = BigInteger.valueOf(integer);
             boolean probablePrime = bigInteger.isProbablePrime((int) Math.log(integer));
-            System.out.println(probablePrime);
             if (integer == 1){
                 list.add(i);
             }
