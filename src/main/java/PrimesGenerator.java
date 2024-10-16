@@ -10,10 +10,9 @@ public class PrimesGenerator {
 
         int i = 2;
         while(list.size() <= n) {
-            int integer = i;
-            BigInteger bigInteger = BigInteger.valueOf(integer);
-            boolean probablePrime = bigInteger.isProbablePrime((int) Math.log(integer));
-            if (integer == 1){
+            BigInteger bigInteger = BigInteger.valueOf(i);
+            boolean probablePrime = bigInteger.isProbablePrime((int) Math.log(i));
+            if (probablePrime){
                 list.add(i);
             }
             i++;
